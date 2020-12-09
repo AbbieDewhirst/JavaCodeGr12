@@ -1,15 +1,15 @@
-/*************************************************************
-**															**
-** Name:		Abbie Dyck									**
-** Date:		September 16th, 2019						**
-** Class Name:	PotatoPuzzleAD.java							**
+/*****************************************************************
+**								**
+** Name:	Abbie Dyck					**
+** Date:	September 16th, 2019				**
+** Class Name:	PotatoPuzzleAD.java				**
 ** Description:	This program reads a file that has amount	**
-**				of 1kilo, 5kilo, and amount of kilos needed.**
-**				It then calculates how many 5kilo and 1kilo	**
-**				bags are needed to complete the shipment,	**
-**				or if the shipment cannot be completed		**
-**														    **
-**************************************************************/
+**		of 1kilo, 5kilo, and amount of kilos needed.	**
+**		It then calculates how many 5kilo and 1kilo	**
+**		bags are needed to complete the shipment,	**
+**		or if the shipment cannot be completed		**
+**							    	**
+******************************************************************/
 package package1;
 
 import java.io.*;
@@ -25,30 +25,30 @@ public class PotatoPuzzleAD {
 		int numberOf1Kilos 	= 0;																//Variable for other mod math
 		int totFive 		= 0;																//Variable for division math
 		int plusRemain 		= 0;																//Variable for more mod math
-		int sub 			= 0;																//More math
+		int sub 		= 0;																//More math
 
 		try {
 
 			BufferedReader bufferedObj = new BufferedReader(new FileReader("/Volumes/MARIA/Potato.txt")); 	//Opens file
 
-			inputData 		= bufferedObj.readLine(); 											// Reads in the first line of the file
-			oneKilo 		= Integer.parseInt(inputData);										//Parses the string to int
+			inputData 		= bufferedObj.readLine(); 												// Reads in the first line of the file
+			oneKilo 		= Integer.parseInt(inputData);												//Parses the string to int
 
-			inputData 		= bufferedObj.readLine(); 											// Reads in the second line of the file
-			fiveKilo 		= Integer.parseInt(inputData);										//Parses the string to int
+			inputData 		= bufferedObj.readLine(); 												// Reads in the second line of the file
+			fiveKilo 		= Integer.parseInt(inputData);												//Parses the string to int
 
-			inputData 		= bufferedObj.readLine(); 											// Reads in the third line of the file
-			totalShipment 	= Integer.parseInt(inputData);										//Parses the string to int
+			inputData 		= bufferedObj.readLine(); 												// Reads in the third line of the file
+			totalShipment 		= Integer.parseInt(inputData);												//Parses the string to int
 
-			numberOf1Kilo 	= totalShipment % (fiveKilo * 5);									//Math for test
-			numberOf1Kilos 	= totalShipment % 5;												//Math for test
-			totFive 		= totalShipment / 5;												//Math for test
+			numberOf1Kilo 		= totalShipment % (fiveKilo * 5);											//Math for test
+			numberOf1Kilos 		= totalShipment % 5;													//Math for test
+			totFive 		= totalShipment / 5;													//Math for test
 
-			if (totalShipment - (fiveKilo * 5) == 0) {											//Test if you have the exact number of big bags for the question
+			if (totalShipment - (fiveKilo * 5) == 0) {													//Test if you have the exact number of big bags for the question
 
 				System.out.println("You will need 0 small bags");
 
-			} else if (oneKilo < numberOf1Kilo) {												//Test to see if the equation cannot be completed
+			} else if (oneKilo < numberOf1Kilo) {														//Test to see if the equation cannot be completed
 
 				System.out.println("You need -1 small bags");
 
@@ -71,8 +71,8 @@ public class PotatoPuzzleAD {
 			}//End if()
 
 			bufferedObj.close();
-		} catch (IOException error) { 															// Catches any errors
-			System.out.println("You have a error: " + error); 									// Prints out any errors that are caught
+		} catch (IOException error) { 																// Catches any errors
+			System.out.println("You have a error: " + error); 												// Prints out any errors that are caught
 		}// End try and catch()
 	}// End main()
 }// End PotatoPuzzleAD()
