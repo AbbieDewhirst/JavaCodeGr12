@@ -1,18 +1,18 @@
-/*************************************************************
-**															**
-** Name:		Abbie Dyck									**
-** Date:		December 16th, 2019							**
-** Class Name:	KrunkoKardAD.java							**
+/*****************************************************************
+**								**
+** Name:	Abbie Dyck					**
+** Date:	December 16th, 2019				**
+** Class Name:	KrunkoKardAD.java				**
 ** Description: This program reads in player one cards frpm	**
-**				a file, and determins player two cards. It 	**
-**				then will form the most ideal strategy to	**
-**				play the game, and will play its cards		**
-**				based off of that. It will print out the	**
-**				cards that are left after each turn, and	**
-**				Will print the number of games player one	**
-**				won at the end of each game.				**
-**														    **
-**************************************************************/
+**		a file, and determins player two cards. It 	**
+**		then will form the most ideal strategy to	**
+**		play the game, and will play its cards		**
+**		based off of that. It will print out the	**
+**		cards that are left after each turn, and	**
+**		Will print the number of games player one	**
+**		won at the end of each game.			**
+**								**
+******************************************************************/
 package package1;
 
 import java.io.*;
@@ -97,13 +97,13 @@ public class KrunkoKardAD {
 		}//End catch()
 	}//close main()
 	
-	/*************************************************************
-	** Name:        leadCard()									**
+	/*****************************************************************
+	** Name:        leadCard()					**
 	** Input:       List<Integer> turn, List<Integer> opp		**
-	** Output:      y or x								 		**
+	** Output:      y or x				 		**
 	** Description: This method will find the best card to lead	**
-	**				the game with.								**
-	**************************************************************/	
+	**		the game with.					**
+	******************************************************************/	
 	private static int leadCard(List<Integer> turn, List<Integer> opp) {
 		int[][]colour  = new int [2][4];//Array for cards
 		colour = getCard(colour, turn, opp);//runs the getCard method
@@ -132,12 +132,12 @@ public class KrunkoKardAD {
 		return losingTurn(turn, opp);//return losing method
 	}//Close leadCard()
 
-	/*************************************************************
-	** Name:        getPlayer2Deck()							**
-	** Input:       List<Integer> a								**
-	** Output:      h								 			**
+	/*****************************************************************
+	** Name:        getPlayer2Deck()				**
+	** Input:       List<Integer> a					**
+	** Output:      h			 			**
 	** Description: This method will find player two deck.		**
-	**************************************************************/	
+	******************************************************************/	
 	private static List<Integer> getPlayer2Deck(List<Integer> a) {
 		int[][] card = new int[4][5];//card array
 		List <Integer> h = new ArrayList<Integer>();//List h
@@ -155,10 +155,10 @@ public class KrunkoKardAD {
 	}//Close getPlayer2Deck()
 
 	/*****************************************************************
-	** Name:        getPlayergetCard2Deck()							**
+	** Name:        getPlayergetCard2Deck()				**
 	** Input:       int[][] i, List<Integer> ii, List<Integer> iii	**
-	** Output:      i								 				**
-	** Description: This method will get the cards.					**
+	** Output:      i						**
+	** Description: This method will get the cards.			**
 	******************************************************************/	
 	private static int[][] getCard(int[][] i, List<Integer> ii, List<Integer> iii) {
 		for (int x = 0; x < ii.size(); x++) {//For loop
@@ -169,11 +169,11 @@ public class KrunkoKardAD {
 	}//Close getCard()
 
 	/*****************************************************************
-	** Name:        losingTurn()									**
-	** Input:       List<Integer> i, List<Integer> ii				**
-	** Output:      choice								 			**
+	** Name:        losingTurn()					**
+	** Input:       List<Integer> i, List<Integer> ii		**
+	** Output:      choice			 			**
 	** Description: This method play the most logical card on the	**
-	**				players losing turn.							**
+	**		players losing turn.				**
 	******************************************************************/
 	private static int losingTurn(List<Integer> i, List<Integer> ii) {
 		int choice = -1;//Make choice equal to -1
@@ -203,11 +203,11 @@ public class KrunkoKardAD {
 	}//Close losingTurn()
 
 	/*****************************************************************
-	** Name:        defencePlay()									**
-	** Input:       List<Integer> a, List<Integer> b, int i			**
-	** Output:      c									 			**
+	** Name:        defencePlay()					**
+	** Input:       List<Integer> a, List<Integer> b, int i		**
+	** Output:      c						**
 	** Description: This method play the most logical defense card	**
-	**				on their turn.									**
+	**		on their turn.					**
 	******************************************************************/
 	private static int defencePlay(List<Integer> a, List<Integer> b, int i) {
 		int c = -1;//C equal to -1
@@ -239,10 +239,10 @@ public class KrunkoKardAD {
 	}//Close defencePlay()
 	
 	/*****************************************************************
-	** Name:        printCards()									**
-	** Input:       List<Integer> P1, List<Integer> P2				**
-	** Output:      void								 			**
-	** Description: This method will print out the cards.			**
+	** Name:        printCards()					**
+	** Input:       List<Integer> P1, List<Integer> P2		**
+	** Output:      void			 			**
+	** Description: This method will print out the cards.		**
 	******************************************************************/
 	private static void printCards(List<Integer> P1, List<Integer> P2) {
 		for (int y = 0; y < P1.size(); y++) {//For the size of p1 list
