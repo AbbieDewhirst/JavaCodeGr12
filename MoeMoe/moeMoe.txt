@@ -1,0 +1,22 @@
+Starting - 1 moe, 0 bigmoes, 0 moeMoes				1 second total
+
+
+After 3 sec - 0 Moe, 1 bigMoes, 0 moeMoes			4 seconds total
+
+
+9 seconds after that -  0 Moes, 0 bigMoe, 1 moeMoe		13 seconds total
+
+
+20 seconds after that - 2 moes, 0 bigMoes, 0 moeMoes		33 seconds total	
+
+
+3 seconds after that - 0 Moes, 2 bigMoes, 0 moeMoes		36 seconds total
+
+
+9 seconds after that - 0 moes, 0 bigMoes, 2 moeMoes		45 seconds total
+
+
+20 seconds after that - 4 moes, 0 bigMoes, 0 moeMoes		65 seconds total
+
+
+one complete cycle = 32 seconds
